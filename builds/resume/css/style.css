@@ -358,7 +358,7 @@ th {
 
 html {
   box-sizing: border-box;
-  font-size: 80%; }
+  font-size: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -368,12 +368,8 @@ body {
   padding: 0;
   background-color: #041b21;
   color: antiquewhite;
-  font-size: 1.46rem;
+  font-size: 1.4rem;
   font-family: "Overlock", cursive; }
-
-.container {
-  width: 80%;
-  margin: 0 auto; }
 
 html {
   box-sizing: border-box; }
@@ -384,13 +380,12 @@ h1, h2 {
   font-weight: 400; }
 
 h1 {
-  font-size: 3.6em; }
+  font-size: 3.0em; }
 
 h2 {
   display: inline-block;
-  margin: 5vh 0;
   border-bottom: 1px dashed antiquewhite;
-  font-size: 2.4em; }
+  font-size: 2.0em; }
 
 h3 {
   margin: 0; }
@@ -435,8 +430,64 @@ header .circle {
     transform: translate(4vw, 4vh) rotate(5turn) translate(-4vw, -4vh) rotate(-5turn);
     box-shadow: 10px 10px 22px 20px #07313179; } }
 
-main {
-  background-color: blue; }
+.panel {
+  color: antiquewhite;
+  font-family: "Overlock", cursive;
+  border-radius: 30px;
+  display: grid;
+  grid-template-areas: "header" "main" "nav" "header";
+  grid-row-gap: 4rem; }
+  .panel .skill-icon {
+    width: 1rem; }
+  .panel .about,
+  .panel .skills,
+  .panel .education {
+    padding: 8vw 4vw;
+    display: flex;
+    flex-direction: column; }
+  .panel .skills,
+  .panel .education {
+    margin: 0 0 5% 0; }
+  .panel .about {
+    text-align: center; }
+    .panel .about .profile-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5rem; }
+      .panel .about .profile-img img {
+        width: 60%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 22px 34px #07313169; }
+    .panel .about .about-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #07313169;
+      box-shadow: 0px 0px 22px 34px #07313179; }
+    .panel .about .job-title span {
+      justify-self: end; }
+    .panel .about .job-title h2 {
+      border-bottom: none;
+      margin-bottom: 2rem; }
+    .panel .about .download {
+      width: 150px;
+      height: 50px;
+      margin-top: 2rem;
+      border-radius: 6px;
+      background-color: #066;
+      padding: .6rem;
+      color: antiquewhite;
+      justify-self: center;
+      align-self: center;
+      text-decoration: none; }
+  .panel .about {
+    grid-area: about; }
+  .panel .skills {
+    grid-area: skills; }
+  .panel .education {
+    grid-area: education; }
 
 nav {
   background-color: blueviolet; }

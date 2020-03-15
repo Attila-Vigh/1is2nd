@@ -18,7 +18,6 @@ const styleCircle = ()=> {
     for(let i = 0; i < circleLength; i++){
         
         circle[i].style.animationDuration = circleLength + "s";
-        // circle[i].style.animationName = "rotate";
         circle[i].style.animationDelay = `${ i / rotationSpeed }s`;
         circle[i].style.left    = startingPointLeft + "vw" ;
         circle[i].style.top     = startingPointTop + "vh" ;
