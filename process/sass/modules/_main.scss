@@ -4,32 +4,55 @@
 	border-radius: 30px;
 	display: grid;
 	grid-template-areas: 
-		"header"
-		"main"
-		"nav"
-		"header";
-	grid-row-gap: 4rem;
-
-	.skill-icon {
-		width: 1rem;
-	}
+	"header"
+	"main"
+	"nav"
+	"header";
+	
 	.about,
 	.skills,
 	.education {
-		padding: 8vw 4vw;
+		padding: 0vw 0vw;
 		display: flex;
 		flex-direction: column;
 	}
-	.skills,
-	.education {
-		margin: 0 0 5% 0;
-	}
-	@import 'main-about';
 	.about {
 		grid-area: about;
 	}
+	@import 'main-about';
+	.skills,
+	.education {
+		h2 {
+			margin: 4rem 2rem;
+			display: inline-table;
+		}
+		div, p {
+			padding-left: 1.8rem;
+			padding-right: 1rem;
+		}
+		div {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+		div, p, h3 {
+			background-color: #07313169;
+			box-shadow: -18px 0px 22px 34px #07313179;
+		}
+	}
 	.skills {
 		grid-area: skills;
+		.skill-icon {
+			width: 2.4rem;
+		}
+		h3 {
+			display: flex;
+			img {
+				margin-left: 1rem;
+			}
+		}
+		div > img {
+			margin: .3rem;
+		}
 	}
 	.education {
 		grid-area: education;

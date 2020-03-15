@@ -435,19 +435,15 @@ header .circle {
   font-family: "Overlock", cursive;
   border-radius: 30px;
   display: grid;
-  grid-template-areas: "header" "main" "nav" "header";
-  grid-row-gap: 4rem; }
-  .panel .skill-icon {
-    width: 1rem; }
+  grid-template-areas: "header" "main" "nav" "header"; }
   .panel .about,
   .panel .skills,
   .panel .education {
-    padding: 8vw 4vw;
+    padding: 0vw 0vw;
     display: flex;
     flex-direction: column; }
-  .panel .skills,
-  .panel .education {
-    margin: 0 0 5% 0; }
+  .panel .about {
+    grid-area: about; }
   .panel .about {
     text-align: center; }
     .panel .about .profile-img {
@@ -482,10 +478,35 @@ header .circle {
       justify-self: center;
       align-self: center;
       text-decoration: none; }
-  .panel .about {
-    grid-area: about; }
+  .panel .skills h2,
+  .panel .education h2 {
+    margin: 4rem 2rem;
+    display: inline-table; }
+  .panel .skills div, .panel .skills p,
+  .panel .education div,
+  .panel .education p {
+    padding-left: 1.8rem;
+    padding-right: 1rem; }
+  .panel .skills div,
+  .panel .education div {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .panel .skills div, .panel .skills p, .panel .skills h3,
+  .panel .education div,
+  .panel .education p,
+  .panel .education h3 {
+    background-color: #07313169;
+    box-shadow: -18px 0px 22px 34px #07313179; }
   .panel .skills {
     grid-area: skills; }
+    .panel .skills .skill-icon {
+      width: 2.4rem; }
+    .panel .skills h3 {
+      display: flex; }
+      .panel .skills h3 img {
+        margin-left: 1rem; }
+    .panel .skills div > img {
+      margin: .3rem; }
   .panel .education {
     grid-area: education; }
 
