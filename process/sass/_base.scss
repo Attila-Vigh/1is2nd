@@ -1,7 +1,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 80%;
+  font-size: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -11,13 +11,8 @@ body {
   padding: 0;
   background-color: $color-primary-bg;
   color:            $color-primary;
-  font-size:        1.46rem;
+  font-size:        1.4rem;
   font-family:      $font-base;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
 }
 
 html {
@@ -29,13 +24,12 @@ h1, h2 {
   font-weight: 400;
 }
 h1 {
-  font-size: 3.6em;
+  font-size: 3.0em;
 }
 h2 {
   display: inline-block;
-  margin: 5vh 0;
   border-bottom: 1px dashed $color-primary;
-  font-size: 2.4em;
+  font-size: 2.0em;
 }
 h3 {
   margin: 0;
