@@ -431,6 +431,7 @@ header .circle {
     box-shadow: 10px 10px 22px 20px #07313179; } }
 
 .panel {
+  padding: 0 1rem;
   color: antiquewhite;
   font-family: "Overlock", cursive;
   border-radius: 30px;
@@ -439,7 +440,6 @@ header .circle {
   .panel .about,
   .panel .skills,
   .panel .education {
-    padding: 0vw 0vw;
     display: flex;
     flex-direction: column; }
   .panel .about {
@@ -447,6 +447,7 @@ header .circle {
   .panel .about {
     text-align: center; }
     .panel .about .profile-img {
+      z-index: 100;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -480,23 +481,23 @@ header .circle {
       text-decoration: none; }
   .panel .skills h2,
   .panel .education h2 {
-    margin: 4rem 2rem;
+    margin: 4rem 0rem;
     display: inline-table; }
   .panel .skills div, .panel .skills p,
   .panel .education div,
   .panel .education p {
-    padding-left: 1.8rem;
-    padding-right: 1rem; }
+    padding: 0 1rem; }
   .panel .skills div,
   .panel .education div {
     padding-top: 1rem;
     padding-bottom: 1rem; }
-  .panel .skills div, .panel .skills p, .panel .skills h3,
-  .panel .education div,
+  .panel .skills p, .panel .skills h3, .panel .skills .skill-icons,
   .panel .education p,
-  .panel .education h3 {
-    background-color: #07313169;
-    box-shadow: -18px 0px 22px 34px #07313179; }
+  .panel .education h3,
+  .panel .education .skill-icons {
+    background-color: #07313179;
+    background-image: radial-gradient(#07313100, #07313179 50%, #07313100 100%);
+    box-shadow: 0px 0px 22px 34px #07313179; }
   .panel .skills {
     grid-area: skills; }
     .panel .skills .skill-icon {
@@ -504,9 +505,42 @@ header .circle {
     .panel .skills h3 {
       display: flex; }
       .panel .skills h3 img {
-        margin-left: 1rem; }
+        margin-left: 1rem;
+        -webkit-animation: wheal 6s ease-in-out infinite alternate;
+                animation: wheal 6s ease-in-out infinite alternate; }
+
+@-webkit-keyframes wheal {
+  100% {
+    transform: translate(20vw, 0) rotate(1turn); } }
+
+@keyframes wheal {
+  100% {
+    transform: translate(20vw, 0) rotate(1turn); } }
     .panel .skills div > img {
-      margin: .3rem; }
+      margin: .3rem;
+      -webkit-animation: shake 9s infinite ease-in-out alternate both;
+              animation: shake 9s infinite ease-in-out alternate both;
+      perspective: 1000px; }
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 12px); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 13px); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 12px); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 12px); } }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 12px); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 13px); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 12px); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 12px); } }
   .panel .education {
     grid-area: education; }
 
