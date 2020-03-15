@@ -2,7 +2,7 @@
 node_modules
 .tmp
 .sass-cache
-resume/build/resume/img/**
+build/resume/img/**
 slides/**
 builds/resume/css/style.css
 
