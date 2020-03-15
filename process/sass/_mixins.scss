@@ -1,0 +1,41 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin fonts (/*$family,*/ $size, $shadow){
+  // font-family: $family; "'Caveat', cursive",
+  font-size: $size;
+  text-shadow: $shadow $shadow $shadow #aaa;
+};
+
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
+
+@mixin lessThan($args1, $args2, $args3) {
+  	@media (max-width: nth($args1)) {
+		@content;
+	}
+  	@media (max-width: nth($args2)) {
+		@content;
+	}
+  	@media (max-width: nth($args3)) {
+		@content;
+	}
+}
+
+@mixin largerThen($args1) {
+  	@media (min-width: $args1) {
+		@content;
+	}
+}
