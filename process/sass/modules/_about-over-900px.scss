@@ -1,0 +1,43 @@
+@include over( 900px) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+	grid-template-areas: 
+	"profile-img  profile-name"
+	"profile-img  job-title"
+	"profile-img  moto"
+	"profile-img  download";
+    align-items: center;
+    .profile-img {
+        grid-area: profile-img;
+        z-index: 100;
+        
+        img {
+            width: 80%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 22px 34px #07313169;
+        }
+    }
+    .profile-name {
+        grid-area: profile-name;
+        z-index: 10;
+    }
+    .job-title {
+        grid-area: job-title;
+    }
+    .moto {
+        grid-area: moto;
+        margin: 3rem 0;
+    }
+    .download {
+        grid-area: download;
+        justify-self: flex-end;
+        margin-top: 2.2rem;
+    }
+    .profile-name,
+    .moto,
+    .job-title,
+    .download {
+        margin-left: 4rem;
+    }
+    
+}

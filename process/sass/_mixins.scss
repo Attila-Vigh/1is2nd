@@ -22,7 +22,7 @@
   @return $randomNum;
 }
 
-@mixin lessThan($args1, $args2, $args3) {
+@mixin under($args1, $args2, $args3) {
   	@media (max-width: nth($args1)) {
 		@content;
 	}
@@ -34,7 +34,7 @@
 	}
 }
 
-@mixin largerThen($args1) {
+@mixin over($args1) {
   	@media (min-width: $args1) {
 		@content;
 	}

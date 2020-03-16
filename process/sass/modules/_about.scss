@@ -1,0 +1,31 @@
+.profile-img {
+    z-index: 100;
+    img {
+        width: 12rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 22px 34px #07313169;
+    }
+}
+.job-title {
+    span {
+        justify-self: end;
+    }
+    h2 {
+        border-bottom: none;
+    }
+}
+.profile-name, 
+.download {
+    // align-self: flex-end;
+}
+.download {
+    max-width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #066;
+    padding: .6rem;
+    color: $color-primary;
+    justify-self: center;
+    text-decoration: none;
+}
+
