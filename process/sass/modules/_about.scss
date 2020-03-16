@@ -1,5 +1,6 @@
 .profile-img {
     z-index: 100;
+    margin-top: 4rem;
     img {
         width: 12rem;
         border-radius: 50%;
@@ -13,10 +14,6 @@
     h2 {
         border-bottom: none;
     }
-}
-.profile-name, 
-.download {
-    // align-self: flex-end;
 }
 .download {
     max-width: 150px;

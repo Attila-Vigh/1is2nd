@@ -1,42 +1,43 @@
 
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+	box-sizing: border-box;
+	font-size: 100%;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 body {
-  margin: 0;
-  padding: 0;
-  background-color: $color-primary-bg;
-  color:            $color-primary;
-  font-size:        1.4rem;
-  font-family:      $font-base;
+	margin: 0;
+	padding: 0;
+	background-color: $color-primary-bg;
+	color:            $color-primary;
+	font-size:        1.4rem;
+	font-family:      $font-base;
 }
 
 html {
 	box-sizing: border-box;
 }
 h1, h2 {
-  margin: 0;
-  font-family: $font-h1-h2;
-  font-weight: 400;
+	margin: 0;
+	font-family: $font-h1-h2;
+	font-weight: 400;
 }
 h1 {
-  font-size: 3.0em;
+	font-size: 3.0em;
 }
 h2 {
-  display: inline-block;
-  border-bottom: 1px dashed $color-primary;
-  font-size: 2.0em;
+	display: inline-block;
+	border-bottom: 1px dashed $color-primary;
+	font-size: 2.0em;
 }
 h3 {
-  margin: 0;
+	margin: 0;
 }
 
 a:hover {
-  text-decoration: none;
-  cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
 }
+
 

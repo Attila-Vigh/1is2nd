@@ -1,3 +1,49 @@
 nav {
-	background-color: blueviolet;
-}
+	position: relative;
+	display: 		flex;
+	margin: 		2vh;
+	margin-right:	2vh;
+	text-align: 	center;
+	 ul {
+		width: 	 100%;
+		margin:  2vw;
+		padding: 0;
+		li {
+			display: 					flex;
+            border-radius: 				6px;
+			list-style: 				none;
+			box-shadow: 				0px 0px 22px 34px #07313179;
+			a {
+				width: 					100%;
+				padding: 				4vh 15px;
+				border-radius: 			6px;
+                background-color:   	$color-primary-bg;
+				color: 					$color-primary;
+                box-shadow: 			1px 1px 10px 3px $color-primary;
+				font-size: 				larger;
+                font-weight: 			700;
+				list-style-type: 		none;
+				text-decoration: 		none;
+				text-transform: 		uppercase;
+				transition: 			background-color 0.4s ease-in-out, 
+										perspective 0.8s;
+				&:hover, &.active {
+				 	background-image:   linear-gradient($color-primary-bg, $color-secondary-bg 50%, $color-primary-bg 100%);
+					color:				$color-secondary;
+					box-shadow: 		1px 1px 10px 5px $color-primary;
+					perspective: 		1000px;
+					
+				}				
+			}
+			& cite {
+				margin-left:	 auto;
+				margin-right:	 auto;
+				justify-content: center;
+				align-items:	 baseline;
+			}}}
+	@include over(600px){
+		
+		width: 666px;
+		margin: 5rem auto;
+	}
+		}

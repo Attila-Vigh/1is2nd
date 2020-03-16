@@ -1,10 +1,23 @@
 .panel {
+	color: $color-primary;
+	font-family: $font-base;
+	max-height: 0;
+	overflow: hidden;
+	z-index: -100;
+	opacity: 0.0;
+	transition: all 1s ease-in-out;
+	&.show {
+		max-height: max-content;
+		opacity: 1.0;
+		overflow: visible;
+		position: relative; 
+	}
 	padding: 0 1rem;
 	color: $color-primary;
 	font-family: $font-base;
 	border-radius: 30px;
 	display: grid;
-	grid-template-columns: 1.5em 1fr 1.5em; 
+	grid-template-columns: .5em 1fr .5em; 
 	grid-template-areas: 
 	".	about    ."
 	".	skills   ."

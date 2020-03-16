@@ -433,13 +433,27 @@ header {
     box-shadow: 10px 10px 22px 20px #07313179; } }
 
 .panel {
+  color: antiquewhite;
+  font-family: "Overlock", cursive;
+  max-height: 0;
+  overflow: hidden;
+  z-index: -100;
+  opacity: 0.0;
+  transition: all 1s ease-in-out;
   padding: 0 1rem;
   color: antiquewhite;
   font-family: "Overlock", cursive;
   border-radius: 30px;
   display: grid;
-  grid-template-columns: 1.5em 1fr 1.5em;
+  grid-template-columns: .5em 1fr .5em;
   grid-template-areas: ".	about    ." ".	skills   ." ". education ."; }
+  .panel.show {
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    opacity: 1.0;
+    overflow: visible;
+    position: relative; }
   @media (min-width: 600px) {
     .panel {
       grid-template-columns: 10% 1fr 10%; } }
@@ -461,7 +475,8 @@ header {
       background-color: #07313179;
       box-shadow: 0px 0px 22px 34px #07313179; }
     .panel .about .profile-img {
-      z-index: 100; }
+      z-index: 100;
+      margin-top: 4rem; }
       .panel .about .profile-img img {
         width: 12rem;
         border-radius: 50%;
@@ -605,7 +620,47 @@ header {
           border-bottom: 0; } }
 
 nav {
-  background-color: blueviolet; }
+  position: relative;
+  display: flex;
+  margin: 2vh;
+  margin-right: 2vh;
+  text-align: center; }
+  nav ul {
+    width: 100%;
+    margin: 2vw;
+    padding: 0; }
+    nav ul li {
+      display: flex;
+      border-radius: 6px;
+      list-style: none;
+      box-shadow: 0px 0px 22px 34px #07313179; }
+      nav ul li a {
+        width: 100%;
+        padding: 4vh 15px;
+        border-radius: 6px;
+        background-color: #041b21;
+        color: antiquewhite;
+        box-shadow: 1px 1px 10px 3px antiquewhite;
+        font-size: larger;
+        font-weight: 700;
+        list-style-type: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.4s ease-in-out,  perspective 0.8s; }
+        nav ul li a:hover, nav ul li a.active {
+          background-image: linear-gradient(#041b21, antiquewhite 50%, #041b21 100%);
+          color: #041b21;
+          box-shadow: 1px 1px 10px 5px antiquewhite;
+          perspective: 1000px; }
+      nav ul li cite {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: baseline; }
+  @media (min-width: 600px) {
+    nav {
+      width: 666px;
+      margin: 5rem auto; } }
 
 footer {
   background-color: red; }
