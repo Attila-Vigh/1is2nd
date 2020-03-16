@@ -28,3 +28,24 @@ const styleCircle = ()=> {
     return circle;
 } /** end  styleCircle */
 styleCircle();
+
+(function navBtn() {
+    let btns = Array.from(document.getElementsByClassName("nav-btn"));
+    let panels = Array.from(document.getElementsByClassName("panel"));
+
+    const removeClass = () => {            
+        btns.forEach( btn => btn.classList.remove("active"));
+        panels.forEach( panel => panel.classList.remove("show"));
+    }
+    
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            removeClass()
+            btns[i].classList.add("active");
+            
+            if(btns[i].classList.contains("display")) {
+                panels[i].classList.add("show");
+            }
+        });
+    }
+})()
