@@ -1,0 +1,94 @@
+#contact {
+	padding: 0 1rem;
+	@include over(730px) {
+        display: grid;
+		grid-template-columns: 1fr 730px 1fr;
+		grid-template-areas: 
+			" ...	contact-title 		... " 
+			" ...	contact-details 	... ";
+		h2 {
+			grid-area: contact-title;
+		}
+		.contact {
+            grid-area: contact-details;
+		}
+	}
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1.5rem 2rem auto 1fr;
+    grid-row-gap: .4rem;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		" ...  	constVar 	 	constVar		constVar			... "
+		" ...  		... 	 	firstLet 		firstLet 			... "
+		" ...  		...			   ... 			contact-details		... "
+		" ...  		... 	 	secondLet 		secondLet 			... "
+		" ...  		...			   ... 			ifResult 			... "
+		" ...  		...			   ... 			thenResult 			... "
+		" ...  		... 	returnResults 		returnResults 	 	... "
+		" ...   closeBraket   	closeBraket   	closeBraket   	 	... ";
+	.constVar {
+		grid-area: constVar;
+	}
+	.firstLet {
+		grid-area: firstLet;
+	}
+	.secondLet {
+		grid-area: secondLet;
+	}
+	.ifResult {
+		grid-area: ifResult;
+	}
+	.thenResult {
+		grid-area: thenResult;
+	}
+	.returnResults {
+		grid-area: returnResults;
+	}
+	.closeBraket {
+		grid-area: closeBraket;
+	}
+	.contact-details {
+		grid-area: contact-details;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	background-color: #07313179;
+	box-shadow: 0px 0px 22px 34px #07313179;
+	& * {
+		background-image: radial-gradient( #07313179, #07313100 50%, #07313179 100%);
+		box-shadow: 0px 0px 22px 34px #07313119;
+    }
+    @include over(730px) {
+        grid-template-columns: 10% 2rem 8rem 6rem 6rem auto;
+        grid-row-gap: .6rem;
+        grid-template-areas: 
+			" ...  	constVar 	 	constVar		 constVar          constVar			constVar        ..."
+			" ...  		... 	 	firstLet 		 contact-details   contact-details  contact-details ..."
+			" ...  		... 	 	secondLet 		 secondLet         ifResult 		thenResult      ..."
+			" ...  		... 	    returnResults 	 returnResults     returnResults 	 ...            ..."
+			" ...   closeBraket   	closeBraket   	 closeBraket       closeBraket   	 ...            ...";
+        .contact-details {
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 1.5rem;
+        }
+    }
+}
+.green, #contact a, q > a{
+	color: chartreuse;
+}
+.orange {
+	color: $orange;
+}
+.violet {
+	color: violet;
+}
+.blue {
+	color: rgb(79, 79, 165);
+}
+.typoSign {
+	color: $color-typoSign;
+}
