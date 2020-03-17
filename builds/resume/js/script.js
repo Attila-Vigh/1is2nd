@@ -1,10 +1,10 @@
 'use strict'
 
-let width  = window.innerWidth;
-let height = window.innerHeight;
 
 const styleCircle = ()=> {
     
+    let width  = window.innerWidth;
+    let height = window.innerHeight;
     let circle              = document.querySelector('.circle');
         circle              = circle.children;
         // Create an array with all the images
@@ -49,3 +49,4 @@ styleCircle();
         });
     }
 })()
+

@@ -383,8 +383,8 @@ h1 {
   font-size: 3.0em; }
 
 h2 {
+  margin: 4rem 0rem;
   display: inline-block;
-  border-bottom: 1px dashed antiquewhite;
   font-size: 2.0em; }
 
 h3 {
@@ -432,12 +432,14 @@ header {
     transform: translate(4vw, 4vh) rotate(5turn) translate(-4vw, -4vh) rotate(-5turn);
     box-shadow: 10px 10px 22px 20px #07313179; } }
 
+main {
+  padding-top: 3rem; }
+
 .panel {
   color: antiquewhite;
   font-family: "Overlock", cursive;
   max-height: 0;
   overflow: hidden;
-  z-index: -100;
   opacity: 0.0;
   transition: all 1s ease-in-out;
   padding: 0 1rem;
@@ -454,7 +456,7 @@ header {
     opacity: 1.0;
     overflow: visible;
     position: relative; }
-  @media (min-width: 600px) {
+  @media (min-width: 730) {
     .panel {
       grid-template-columns: 10% 1fr 10%; } }
   .panel .about,
@@ -463,30 +465,47 @@ header {
     display: flex;
     flex-direction: column; }
   .panel .about {
+    padding-top: 10rem;
     grid-area: about;
     text-align: center;
     display: grid;
-    grid-template-rows: 2.4fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "profile-img" "profile-name" "moto" "job-title" "download"; }
+    grid-template-rows: 0 1.4fr .6fr .6fr .6fr .6fr;
+    grid-template-areas: "empty" "profile-img" "profile-name" "moto" "job-title" "download"; }
+    .panel .about .profile-img,
     .panel .about .profile-name,
     .panel .about .moto,
     .panel .about .job-title,
     .panel .about .download {
       background-color: #07313179;
       box-shadow: 0px 0px 22px 34px #07313179; }
+      .panel .about .profile-img *,
+      .panel .about .profile-name *,
+      .panel .about .moto *,
+      .panel .about .job-title *,
+      .panel .about .download * {
+        background-image: radial-gradient(#073131bb, #07313100 50%, #073131bb 100%);
+        box-shadow: 0px 0px 22px 34px #07313119; }
+    .panel .about .empty {
+      max-height: 0; }
     .panel .about .profile-img {
       z-index: 100;
-      margin-top: 4rem; }
-      .panel .about .profile-img img {
-        width: 12rem;
-        border-radius: 50%;
-        box-shadow: 0px 0px 22px 34px #07313169; }
-    .panel .about .job-title span {
-      justify-self: end; }
-    .panel .about .job-title h2 {
-      border-bottom: none; }
+      margin-top: 4rem;
+      width: 12rem;
+      border-radius: 50%;
+      justify-self: center;
+      align-self: center; }
+    .panel .about .profile-name {
+      align-self: end; }
+    .panel .about .job-title {
+      align-self: start; }
+      .panel .about .job-title span {
+        justify-self: end;
+        font-size: small; }
+      .panel .about .job-title h2 {
+        border-bottom: none;
+        margin-top: 0; }
     .panel .about .download {
-      max-width: 150px;
+      min-width: 150px;
       height: 50px;
       border-radius: 6px;
       background-color: #066;
@@ -494,19 +513,18 @@ header {
       color: antiquewhite;
       justify-self: center;
       text-decoration: none; }
-    @media (min-width: 900px) {
+    @media (min-width: 730px) {
       .panel .about {
-        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        grid-template-columns: 10% 1fr 2fr 10%;
         grid-template-rows: auto;
-        grid-template-areas: "profile-img  profile-name" "profile-img  job-title" "profile-img  moto" "profile-img  download";
-        align-items: center; }
+        grid-template-areas: " ... profile-img  profile-name ... " " ... profile-img  job-title    ... " " ... profile-img  moto         ... " " ... profile-img  download     ... "; }
         .panel .about .profile-img {
           grid-area: profile-img;
-          z-index: 100; }
-          .panel .about .profile-img img {
-            width: 80%;
-            border-radius: 50%;
-            box-shadow: 0px 0px 22px 34px #07313169; }
+          z-index: 100;
+          width: 100%;
+          border-radius: 50%;
+          align-self: end; }
         .panel .about .profile-name {
           grid-area: profile-name;
           z-index: 10; }
@@ -526,7 +544,6 @@ header {
           margin-left: 4rem; } }
   .panel .skills h2,
   .panel .education h2 {
-    margin: 4rem 0rem;
     display: inline-table; }
   .panel .skills div, .panel .skills p,
   .panel .education div,
@@ -586,10 +603,10 @@ header {
     transform: translate3d(-4px, 0, 12px); }
   40%, 60% {
     transform: translate3d(4px, 0, 12px); } }
-    @media (min-width: 600px) {
+    @media (min-width: 730px) {
       .panel .skills {
         display: grid;
-        grid-template-columns: 1fr 600px 1fr;
+        grid-template-columns: 1fr 730px 1fr;
         grid-template-areas: " . skills-title 		. " " . persoal-description . " " . tech-title 			. " " . technologies 		. ";
         flex-direction: row;
         justify-content: center; }
@@ -600,24 +617,20 @@ header {
         .panel .skills .tech-title {
           grid-area: tech-title; }
         .panel .skills .technologies {
-          grid-area: technologies; }
-        .panel .skills h2 {
-          border-bottom: 0; } }
+          grid-area: technologies; } }
   .panel .education {
     grid-area: education; }
-    @media (min-width: 600px) {
+    @media (min-width: 730px) {
       .panel .education {
         display: grid;
-        grid-template-columns: 1fr 600px 1fr;
+        grid-template-columns: 1fr 730px 1fr;
         grid-template-areas: " . education-title   . " " . education-detalis . ";
         flex-direction: row;
         justify-content: center; }
         .panel .education .education-title {
           grid-area: education-title; }
         .panel .education .education-detalis {
-          grid-area: education-detalis; }
-        .panel .education h2 {
-          border-bottom: 0; } }
+          grid-area: education-detalis; } }
 
 nav {
   position: relative;
@@ -648,19 +661,92 @@ nav {
         text-transform: uppercase;
         transition: background-color 0.4s ease-in-out,  perspective 0.8s; }
         nav ul li a:hover, nav ul li a.active {
-          background-image: linear-gradient(#041b21, antiquewhite 50%, #041b21 100%);
           color: #041b21;
+          border: 1px dotted #faebd744;
           box-shadow: 1px 1px 10px 5px antiquewhite;
+          box-shadow: 1px 1px 10px 3px #faebd744;
+          text-shadow: 0 0 13px #faebd744, 0 0 15px #faebd744;
+          background-image: linear-gradient(#041b21, antiquewhite 50%, #041b21 100%);
+          background-image: linear-gradient(#041b21 0%, #faebd744 50%, #041b21 100%);
           perspective: 1000px; }
       nav ul li cite {
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
         align-items: baseline; }
-  @media (min-width: 600px) {
+  @media (min-width: 730px) {
     nav {
-      width: 666px;
+      width: 730px;
       margin: 5rem auto; } }
 
-footer {
-  background-color: red; }
+#contact {
+  padding: 0 1rem; }
+  @media (min-width: 730px) {
+    #contact {
+      display: grid;
+      grid-template-columns: 1fr 730px 1fr;
+      grid-template-areas: " ...	contact-title 		... "  " ...	contact-details 	... "; }
+      #contact h2 {
+        grid-area: contact-title; }
+      #contact .contact {
+        grid-area: contact-details; } }
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.5rem 2rem auto 1fr;
+  grid-row-gap: .4rem;
+  grid-template-rows: auto;
+  grid-template-areas: " ...  	constVar 	 	constVar		constVar			... " " ...  		... 	 	firstLet 		firstLet 			... " " ...  		...			   ... 			contact-details		... " " ...  		... 	 	secondLet 		secondLet 			... " " ...  		...			   ... 			ifResult 			... " " ...  		...			   ... 			thenResult 			... " " ...  		... 	returnResults 		returnResults 	 	... " " ...   closeBraket   	closeBraket   	closeBraket   	 	... ";
+  background-color: #07313179;
+  box-shadow: 0px 0px 22px 34px #07313179; }
+  .contact .constVar {
+    grid-area: constVar; }
+  .contact .firstLet {
+    grid-area: firstLet; }
+  .contact .secondLet {
+    grid-area: secondLet; }
+  .contact .ifResult {
+    grid-area: ifResult; }
+  .contact .thenResult {
+    grid-area: thenResult; }
+  .contact .returnResults {
+    grid-area: returnResults; }
+  .contact .closeBraket {
+    grid-area: closeBraket; }
+  .contact .contact-details {
+    grid-area: contact-details;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .contact * {
+    background-image: radial-gradient(#07313179, #07313100 50%, #07313179 100%);
+    box-shadow: 0px 0px 22px 34px #07313119; }
+  @media (min-width: 730px) {
+    .contact {
+      grid-template-columns: 10% 2rem 8rem 6rem 6rem auto;
+      grid-row-gap: .6rem;
+      grid-template-areas: " ...  	constVar 	 	constVar		 constVar          constVar			constVar        ..." " ...  		... 	 	firstLet 		 contact-details   contact-details  contact-details ..." " ...  		... 	 	secondLet 		 secondLet         ifResult 		thenResult      ..." " ...  		... 	    returnResults 	 returnResults     returnResults 	 ...            ..." " ...   closeBraket   	closeBraket   	 closeBraket       closeBraket   	 ...            ..."; }
+      .contact .contact-details {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.5rem; } }
+
+.green, #contact a, q > a {
+  color: chartreuse; }
+
+.orange {
+  color: #fa6800; }
+
+.violet {
+  color: violet; }
+
+.blue {
+  color: #4f4fa5; }
+
+.typoSign {
+  color: #f7d2d2; }
+
+footer .copyright {
+  margin: 4rem 0 1rem;
+  text-align: center;
+  font-size: small; }

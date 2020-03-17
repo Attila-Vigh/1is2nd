@@ -1,21 +1,18 @@
-@include over( 900px) {
-    grid-template-columns: 1fr 2fr;
+@include over( 730px) {
+    align-items: center;
+    grid-template-columns: 10% 1fr 2fr 10%;
     grid-template-rows: auto;
 	grid-template-areas: 
-	"profile-img  profile-name"
-	"profile-img  job-title"
-	"profile-img  moto"
-	"profile-img  download";
-    align-items: center;
+	" ... profile-img  profile-name ... "
+	" ... profile-img  job-title    ... "
+	" ... profile-img  moto         ... "
+	" ... profile-img  download     ... ";
     .profile-img {
         grid-area: profile-img;
         z-index: 100;
-        
-        img {
-            width: 80%;
-            border-radius: 50%;
-            box-shadow: 0px 0px 22px 34px #07313169;
-        }
+        width: 100%;
+        border-radius: 50%;
+        align-self: end;
     }
     .profile-name {
         grid-area: profile-name;
@@ -39,5 +36,4 @@
     .download {
         margin-left: 4rem;
     }
-    
 }

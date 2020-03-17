@@ -1,9 +1,11 @@
+main {
+	padding-top: 3rem;
+}
 .panel {
 	color: $color-primary;
 	font-family: $font-base;
 	max-height: 0;
 	overflow: hidden;
-	z-index: -100;
 	opacity: 0.0;
 	transition: all 1s ease-in-out;
 	&.show {
@@ -22,7 +24,7 @@
 	".	about    ."
 	".	skills   ."
 	". education .";
-	@include over( 600px) {
+	@include over( 730) {
 		grid-template-columns: 10% 1fr 10%;		
 		}
 	.about,
@@ -32,21 +34,27 @@
 		flex-direction: column;
 	}
 	.about {
-		
+		padding-top: 10rem;
 		grid-area: about;
 		text-align: center;
 		display: grid;
-		grid-template-rows: 2.4fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0 1.4fr .6fr .6fr .6fr .6fr;
 		grid-template-areas: 
+			"empty"
 			"profile-img"
 			"profile-name"
 			"moto"
 			"job-title"
 			"download";
+		.profile-img,
 		.profile-name,
 		.moto,
 		.job-title,
 		.download {
+			& * {
+				background-image: radial-gradient( #073131bb, #07313100 50%, #073131bb 100%);
+				box-shadow: 0px 0px 22px 34px #07313119;
+			}
 			background-color: $color-shadow;
 			box-shadow: 0px 0px 22px 34px $color-shadow;
 		}
@@ -56,7 +64,6 @@
 	.skills,
 	.education {
 		h2 {
-			margin: 4rem 0rem;
 			display: inline-table;
 		}
 		div, p {
@@ -98,9 +105,9 @@
 			30%, 50%, 70% { transform: translate3d(-4px, 0, 12px);}			  
 			40%, 60% { transform: translate3d(4px, 0, 12px);}
 		}
-		@include over(600px){
+		@include over(730px){
 			display: grid;
-			grid-template-columns: 1fr 600px 1fr;
+			grid-template-columns: 1fr 730px 1fr;
 			grid-template-areas: 
 				" . skills-title 		. "
 				" . persoal-description . "
@@ -112,16 +119,13 @@
 			.persoal-description { 	grid-area: persoal-description;}
 			.tech-title 		 {	grid-area: tech-title		  ;}
 			.technologies 		 {	grid-area: technologies		  ;}
-			h2 {
-				border-bottom: 0;
-			}
 		}
 	}
 	.education {
 		grid-area: education;
-		@include over(600px){
+		@include over(730px){
 			display: grid;
-			grid-template-columns: 1fr 600px 1fr;
+			grid-template-columns: 1fr 730px 1fr;
 			grid-template-areas: 
 				" . education-title   . "
 				" . education-detalis . ";
@@ -129,9 +133,6 @@
 			justify-content: center;
 			.education-title	{	grid-area: education-title  ;}
 			.education-detalis	{	grid-area: education-detalis;}
-			h2 {
-				border-bottom: 0;
-			}
 		}
 	}
 }

@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/6e47fdd73a.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700">
     <link rel="stylesheet" href="css/style.css">
     <title>Attila Vigh | Resume</title>
 </head>
-<body>
-<!-- <div class="container"> -->
-    
+<body>    
     <script async src="js/script.js"></script>
     
     <header id="home">
@@ -44,19 +41,16 @@
     <main>
         <section id="about" class="panel " >
                 <div class="about">
-                    <div class="profile-img">
-                        <img src="img/attila-vigh-profile.jpg" alt="profile image">
+                    <img class="profile-img" src="img/attila-vigh-profile.jpg" alt="profile image">
+                    <div class="empty"></div>
+                    <h1 class="profile-name">Attila Vigh</h1>
+                    <div class="job-title">
+                        <span id="jr">jr.</span>
+                        <h2 >Web Developer</h2>
                     </div>
-                    <!-- <div class="about-info"> -->
-                        <h1 class="profile-name">Attila Vigh</h1>
-                        <div class="job-title">
-                            <span id="jr">jr.</span>
-                            <h2 >Web Developer</h2>
-                        </div>
-                        <p class="moto"><i><q>If something works properly, we have to find out why.</q></i></p>
-                        <a href="attilavigh-cv.pdf" class="download" download >Download CV</a>
-                        <!-- </div> -->
-                    </div>
+                    <p class="moto"><i><q>If something works properly, we have to find out why.</q></i></p>
+                    <a href="attilavigh-cv.pdf" class="download" download >Download CV</a>
+                </div>
             </section>
             <section id="skills" class="panel">
                 <div class="skills">
@@ -151,7 +145,7 @@
             
         </ul>
     </nav> 
-    <footer >
+    <aside >
         <div id="contact">
             <h2>Contact</h2>
             <div class="contact">
@@ -164,28 +158,32 @@
                     <span class="typoSign"> => </span>
                     <span class="typoSign"> { </span>
                 </div>    
-                <div class="firstLet">
+                <span class="firstLet">
                     
                     <span class="violet ">let </span><span class="blue">contact <span class="typoSign"> = </span> </span> 
-                        <span class="green">&quot</span>
-                            <a href="attilavigh.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i><span class="sr-only"></span></a>
-                            <a href="https://github.com/Attila-Vigh  "><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only"></span</a>
-                            <a href="https://www.linkedin.com/in/attila-vigh"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only"></span></a>
-                </div>
-                        
-                <div class="webURL">
-                    <a href="https://ultimatequestion404.com/">ultimatequestion404.com/</a>
                     <span class="green">&quot</span>
-                    <span class="typoSign">;</span>
-                </div>    
+                </span>
+                <span class="contact-details">
+                    <a href="attilavigh.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i><span class="sr-only"></span></a>
+                    <a href="https://github.com/Attila-Vigh  "><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only"></span</a>
+                    <a href="https://www.linkedin.com/in/attila-vigh"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only"></span></a>
+                    <span class="webURL">
+                        <a href="https://ultimatequestion404.com/">ultimatequestion404.com/</a>
+                        <span class="green">&quot</span>
+                        <span class="typoSign">;</span>
+                    </span>    
+                </span>
+                        
                 <div class="secondLet">                
                     <span class="violet">let </span><span class="blue">result </span>
                     <span class="typoSign"> = </span> <i class="blue fa fa-thumbs-up" aria-hidden="true"></i><span class="sr-only"></span> 
+                    <span class="typoSign"> == </span><span class="green"><q>200</q></span>
                 </div>
                 <div class="ifResult">
-                    <span class="typoSign"> ? </span> <span class="blue">contact </span></div>
+                    <span class="typoSign"> ? </span> <span class="blue">contact </span>
+                </div>
                 <div class="thenResult">
-                        <span class="typoSign"> : </span> <span class="green"><q>Recommend me to your rivals</q></span><span class="typoSign">;</span>
+                        <span class="typoSign"> : </span> <span class="green"><q>404</q></span><span class="typoSign">;</span>
                 </div>
                 <div class="returnResults">
                     <span class="violet">return </span><span class="blue">result <span class="typoSign">;</span>
@@ -194,9 +192,10 @@
                     } 
                 </div>
             </div>
-            <p class="copyright"><span class="shadow">Copyright <script> document.writeln(new Date().getFullYear())</script> by Attila Vigh</span></p>
         </div>
-    </footer>
-<!-- </div>    -->
+        </aside>
+        <footer>
+            <p class="copyright"><span class="shadow">Copyright <script> document.writeln(new Date().getFullYear())</script> by Attila Vigh</span></p>
+        </footer>
 </body>
 </html>
